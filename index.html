@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="header">
+    <nav>
+        <a href="#" class="logo"><img src="logo.png" alt="image not found" id="logo1"></a>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Portfolio</a></li>
+            <li><a href="">Clients</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+        <div class="toggle-btn" id="btn">
+            <span id="btn-text">Dark</span>
+            <img src="moon.png" alt="image not found" id="btn-icon">
+        </div>
+    </nav>
+    <div class="content">
+        <h1>Hello!</h1>
+        <h1><span>I'm</span> Andrew Doe</h1>
+         <p>Im a developer and designer with a passion for website design.I always try my best to provide the best experience</p>
+         <a href="#">Hire me</a>
+    </div>
+    <div class="image-box">
+        <img src="user.png" alt="img not found">
+        <div class="pattern">
+            <img src="background.png" alt="">
+            <img src="background.png" alt="">
+        </div>
+    </div>
+  </div>  
+  <script>
+    let btntext=document.getElementById("btn-text");
+    let btnicon=document.getElementById("btn-icon");
+    let btn=document.getElementById("btn");
+    let logo=document.getElementById("logo1");
+    btn.onclick=function()
+    {
+        document.body.classList.toggle("dark-theme");      /* combine style with body by use class name*/
+        if(document.body.classList.contains("dark-theme"))
+        {
+            btnicon.src="sun.png";
+            btntext.innerHTML="light";
+            logo.src="logo-white.png";
+        }
+        else
+        {
+            btnicon.src="moon.png";
+            btntext.innerHTML="dark";
+            logo.src="logo.png";
+        }
+    }
+  </script>
+</body>
+</html>
